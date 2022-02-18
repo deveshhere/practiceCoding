@@ -21,6 +21,7 @@ public class CustomerRestController2 {
 
 	@GetMapping("/text")
 	public String text(){
+
 		return "text";
 	}
 
