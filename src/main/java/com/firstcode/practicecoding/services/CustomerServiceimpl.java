@@ -7,15 +7,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CustomerServiceimpl implements CustomerService {
-	
-	@Autowired
-	private Repository CustomerRepo;
 
-	@Override
-	public void saveCustomerInfo(Customer customer) {
+  @Autowired private Repository CustomerRepo;
 
-		CustomerRepo.save(customer);
-	}
+  @Override
+  public void saveCustomerInfo(Customer customer) {
 
-
+    CustomerRepo.save(customer);
+  }
 }
