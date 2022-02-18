@@ -9,8 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PracticeCodingApplication {
 
   public static void main(String[] args) {
-    log.info("hello world");
-    log.info("hello world");
+    log.info("hello world");log.info("hello world");
     SpringApplication.run(PracticeCodingApplication.class, args);
   }
 }
