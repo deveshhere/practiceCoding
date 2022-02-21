@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'
-          distribution: 'adopt'
+          distribution: 'zulu'
       - name: Run the Maven verify phase
 #         run: mvn -B package --file pom.xml
         run: mvn --batch-mode --update-snapshots verify
