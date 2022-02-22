@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CustomerRestController2 {
 
-  @Autowired
-  private Repository customerRepo;
+  @Autowired private Repository customerRepo;
 
   @GetMapping("/text")
   public String text() {
