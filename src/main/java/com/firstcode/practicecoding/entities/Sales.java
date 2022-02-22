@@ -11,12 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Sales {
-  @Id
-  private Long id;
-  private  String name;
-  private  String sale;
-
-
-
-
+  @Id private Long id;
+  private String name;
+  private String sale;
 }

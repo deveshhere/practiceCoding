@@ -1,4 +1,5 @@
 package com.firstcode.practicecoding.controllers;
+
 import com.firstcode.practicecoding.Repositories.productRepository;
 import com.firstcode.practicecoding.entities.products;
 import java.util.List;
@@ -11,23 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class productController {
 
-    @Autowired
-    private productRepository productRepo;
+  @Autowired private productRepository productRepo;
 
-    @GetMapping("/Alldata")
-    public String productsDetails(){
-        return "names";
-    }
+  @GetMapping("/Alldata")
+  public String productsDetails() {
+    return "names";
+  }
 
-    @GetMapping("/addProduct")
-    public List<products> addproduct(){
-        return productRepo.findAll();
-    }
+  @GetMapping("/addProduct")
+  public List<products> addproduct() {
+    return productRepo.findAll();
+  }
 
-
-    @PutMapping("/updateProduct")
-    public String Updateproduct(@RequestBody products product){
-        productRepo.save(product);
-        return "updated";
-    }
+  @PutMapping("/updateProduct")
+  public String Updateproduct(@RequestBody products product) {
+    productRepo.save(product);
+    return "updated";
+  }
 }

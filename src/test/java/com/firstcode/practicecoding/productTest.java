@@ -8,10 +8,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
 import com.firstcode.practicecoding.Repositories.productRepository;
 import com.firstcode.practicecoding.controllers.productController;
-import com.firstcode.practicecoding.entities.Customer;
 import com.firstcode.practicecoding.entities.products;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -23,14 +21,11 @@ import org.springframework.test.web.servlet.MockMvc;
 @SpringBootTest
 @AutoConfigureMockMvc
 public class productTest {
-  @Autowired
-  productController productcontroller;
+  @Autowired productController productcontroller;
 
-  @Autowired
-  private MockMvc mockMvc;
+  @Autowired private MockMvc mockMvc;
 
-  @Mock
-  productRepository productRepo;
+  @Mock productRepository productRepo;
 
   @Test
   void contextLoads() throws Exception {
@@ -56,13 +51,11 @@ public class productTest {
         .andExpect(status().isOk())
         .andExpect(content().string(containsString("Mobile")));
   }
+
   @Test
   void updateTest() {
-    products pro = new products(1,"Mobile","Raipur");
+    products pro = new products(1, "Mobile", "Raipur");
     String update = productcontroller.Updateproduct(pro);
-    assertEquals("updated",update);
-
+    assertEquals("updated", update);
   }
-
-
 }
