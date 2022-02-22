@@ -30,6 +30,15 @@ jobs:
         run: |
               sudo /etc/init.d/mysql start
               mysql  -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} < Dump20220221.sql
+      - name: Set up MySQL
+        run: |
+            sudo /etc/init.d/mysql start
+            mysql  -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} < customer_1_products.sql
+      - name: Set up MySQL
+        run: |
+            sudo /etc/init.d/mysql start
+            mysql  -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} < customer_1_sales.sql
+
 
       - name: Set up JDK 17
         uses: actions/setup-java@v2
