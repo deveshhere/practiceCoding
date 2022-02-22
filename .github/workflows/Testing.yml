@@ -29,7 +29,7 @@ jobs:
       - name: Set up MySQL
         run: |
               sudo /etc/init.d/mysql start
-              mysql  -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} < customer_1_customer_1.sql, customer_1_products.sql, customer_1_sales.sql
+              mysql  -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} < customer_1_customer_1.sql
 
 
       - name: Set up JDK 17
