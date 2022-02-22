@@ -10,9 +10,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 import com.firstcode.practicecoding.Repositories.productRepository;
-import com.firstcode.practicecoding.controllers.productController;
-import com.firstcode.practicecoding.entities.Customer;
-import com.firstcode.practicecoding.entities.products;
+import com.firstcode.practicecoding.controllers.ProductController;
+import com.firstcode.practicecoding.entities.Products;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +21,9 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class productTest {
+public class ProductTest {
   @Autowired
-  productController productcontroller;
+  ProductController productcontroller;
 
   @Autowired
   private MockMvc mockMvc;
@@ -58,7 +57,7 @@ public class productTest {
   }
   @Test
   void updateTest() {
-    products pro = new products(1,"Mobile","Raipur");
+    Products pro = new Products(1,"Mobile","Raipur");
     String update = productcontroller.Updateproduct(pro);
     assertEquals("updated",update);
 
