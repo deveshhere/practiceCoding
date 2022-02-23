@@ -7,9 +7,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import com.firstcode.practicecoding.repositories.ProductRepository;
-import com.firstcode.practicecoding.controllers.ProductController;
-import com.firstcode.practicecoding.entities.Products;
+import com.firstcode.practicecoding.controllers.SalesController;
+import com.firstcode.practicecoding.entities.Sales;
+import com.firstcode.practicecoding.repositories.SalesRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,26 +19,31 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class productTest {
-  @Autowired ProductController productcontroller;
+public class SalesTest {
 
-  @Autowired private MockMvc mockMvc;
+  @Autowired
+  SalesController salesController;
 
-  @Mock ProductRepository productRepo;
+  @Autowired
+  private MockMvc mockMvc;
+
+  @Mock
+  SalesRepository salesRepository;
+
 
   @Test
   void contextLoads() throws Exception {
-    assertThat(productcontroller).isNotNull();
+    assertThat(salesController).isNotNull();
   }
 
   @Test
   void injectedComponentsAreNotNull() {
-    assertThat(productRepo).isNotNull();
+    assertThat(salesRepository).isNotNull();
   }
 
   @Test
   void testing() {
-    String s = productcontroller.productsDetails();
+    String s = salesController.salesdetails();
     assertEquals("Total", s);
   }
 
@@ -48,13 +53,14 @@ public class productTest {
         .perform(get("/totalSales"))
         .andDo(print())
         .andExpect(status().isOk())
-        .andExpect(content().string(containsString("Mobile")));
+        .andExpect(content().string(containsString("laptop")));
   }
 
   @Test
   void updateTest() {
-    Products pro = new Products(1, "Mobile", "Raipur");
-    String update = productcontroller.Updateproduct(pro);
+    Sales pro = new Sales(1L,"john","laptop");
+    String update = salesController.updateSales(pro);
     assertEquals("updated", update);
   }
+
 }

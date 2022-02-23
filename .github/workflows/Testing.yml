@@ -12,9 +12,9 @@ env:
   DB_PASSWORD: root
 jobs:
 
-
   formatting:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2 # v2 minimum required
       - uses: axel-op/googlejavaformat-action@v3
@@ -30,8 +30,6 @@ jobs:
         run: |
           sudo /etc/init.d/mysql start
           mysql  -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} < customer_1.sql < products.sql < sales.sql
-
-
 
       - name: Set up JDK 17
         uses: actions/setup-java@v2
