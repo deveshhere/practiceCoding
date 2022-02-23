@@ -1,6 +1,5 @@
 package com.firstcode.practicecoding.controllers;
 
-import com.firstcode.practicecoding.entities.Products;
 import com.firstcode.practicecoding.entities.Sales;
 import com.firstcode.practicecoding.repositories.SalesRepository;
 import java.util.List;
@@ -13,11 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SalesController {
 
-  @Autowired
-  SalesRepository salesRepo;
+  @Autowired SalesRepository salesRepo;
 
   @GetMapping("/sales")
-  public String salesdetails(){
+  public String salesdetails() {
     return "Total";
   }
 
@@ -31,5 +29,4 @@ public class SalesController {
     salesRepo.save(sales);
     return "updated";
   }
-
 }

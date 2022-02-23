@@ -21,15 +21,11 @@ import org.springframework.test.web.servlet.MockMvc;
 @AutoConfigureMockMvc
 public class SalesTest {
 
-  @Autowired
-  SalesController salesController;
+  @Autowired SalesController salesController;
 
-  @Autowired
-  private MockMvc mockMvc;
+  @Autowired private MockMvc mockMvc;
 
-  @Mock
-  SalesRepository salesRepository;
-
+  @Mock SalesRepository salesRepository;
 
   @Test
   void contextLoads() throws Exception {
@@ -58,9 +54,8 @@ public class SalesTest {
 
   @Test
   void updateTest() {
-    Sales pro = new Sales(1L,"john","laptop");
+    Sales pro = new Sales(1L, "john", "laptop");
     String update = salesController.updateSales(pro);
     assertEquals("updated", update);
   }
-
 }
