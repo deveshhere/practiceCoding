@@ -1,5 +1,4 @@
 package com.firstcode.practicecoding;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -39,13 +38,13 @@ public class productTest {
   @Test
   void testing() {
     String s = productcontroller.productsDetails();
-    assertEquals("Total", s);
+    assertEquals("names", s);
   }
 
   @Test
   public void getAllData() throws Exception {
     this.mockMvc
-        .perform(get("/totalSales"))
+        .perform(get("/addProduct"))
         .andDo(print())
         .andExpect(status().isOk())
         .andExpect(content().string(containsString("Mobile")));
