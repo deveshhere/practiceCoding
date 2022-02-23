@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProductController {
 
-  @Autowired
-  ProductRepository productRepo;
+  @Autowired ProductRepository productRepo;
 
   @GetMapping("/Alldata")
   public String productsDetails() {

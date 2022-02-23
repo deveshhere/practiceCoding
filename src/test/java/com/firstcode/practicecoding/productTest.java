@@ -24,8 +24,7 @@ public class productTest {
 
   @Autowired private MockMvc mockMvc;
 
-  @Mock
-  ProductRepository productRepo;
+  @Mock ProductRepository productRepo;
 
   @Test
   void contextLoads() throws Exception {
