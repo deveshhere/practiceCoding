@@ -28,8 +28,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set up MySQL
         run: |
-              sudo /etc/init.d/mysql start
-              mysql  -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} < customer_1.sql
+          sudo /etc/init.d/mysql start
+          mysql  -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} < customer_1.sql
+
 
 
       - name: Set up JDK 17
