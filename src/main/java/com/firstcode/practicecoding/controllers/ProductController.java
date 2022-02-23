@@ -12,14 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProductController {
 
-  @Autowired
-  productRepository productRepo;
+  @Autowired productRepository productRepo;
 
   @GetMapping("/Alldata")
   public String productsDetails() {
     return "names";
   }
-
 
   @GetMapping("/addProduct")
   public List<Products> addproduct() {
@@ -31,5 +29,4 @@ public class ProductController {
     productRepo.save(product);
     return "updated";
   }
-
 }

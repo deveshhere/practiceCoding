@@ -21,8 +21,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @SpringBootTest
 @AutoConfigureMockMvc
 public class ProductTest {
-  @Autowired
-  ProductController productcontroller;
+  @Autowired ProductController productcontroller;
 
   @Autowired private MockMvc mockMvc;
 
@@ -55,7 +54,7 @@ public class ProductTest {
 
   @Test
   void updateTest() {
-    Products pro = new Products(1,"Mobile","Raipur");
+    Products pro = new Products(1, "Mobile", "Raipur");
     String update = productcontroller.Updateproduct(pro);
     assertEquals("updated", update);
   }

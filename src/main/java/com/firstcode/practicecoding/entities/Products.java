@@ -14,9 +14,7 @@ public class Products {
     this.city = city;
   }
 
-  public Products() {
-
-  }
+  public Products() {}
 
   public long getId() {
     return id;
@@ -42,8 +40,7 @@ public class Products {
     this.city = city;
   }
 
-  @Id
-  private long id;
+  @Id private long id;
   private String name;
   private String city;
 }
