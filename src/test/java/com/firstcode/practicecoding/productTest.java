@@ -7,7 +7,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import com.firstcode.practicecoding.Repositories.productRepository;
+import com.firstcode.practicecoding.repositories.ProductRepository;
 import com.firstcode.practicecoding.controllers.ProductController;
 import com.firstcode.practicecoding.entities.Products;
 import org.junit.jupiter.api.Test;
@@ -24,7 +24,8 @@ public class productTest {
 
   @Autowired private MockMvc mockMvc;
 
-  @Mock productRepository productRepo;
+  @Mock
+  ProductRepository productRepo;
 
   @Test
   void contextLoads() throws Exception {

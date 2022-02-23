@@ -1,6 +1,6 @@
 package com.firstcode.practicecoding.controllers;
 
-import com.firstcode.practicecoding.Repositories.productRepository;
+import com.firstcode.practicecoding.repositories.ProductRepository;
 import com.firstcode.practicecoding.entities.Products;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProductController {
 
-  @Autowired productRepository productRepo;
+  @Autowired
+  ProductRepository productRepo;
 
   @GetMapping("/Alldata")
   public String productsDetails() {

@@ -1,6 +1,6 @@
 package com.firstcode.practicecoding.services;
 
-import com.firstcode.practicecoding.Repositories.Repository;
+import com.firstcode.practicecoding.repositories.Repository;
 import com.firstcode.practicecoding.entities.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

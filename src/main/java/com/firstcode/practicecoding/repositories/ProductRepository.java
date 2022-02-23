@@ -1,8 +1,8 @@
-package com.firstcode.practicecoding.Repositories;
+package com.firstcode.practicecoding.repositories;
 
 import com.firstcode.practicecoding.entities.Products;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface productRepository extends JpaRepository<Products, Long> {}
+public interface ProductRepository extends JpaRepository<Products, Long> {}

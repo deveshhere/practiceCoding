@@ -2,7 +2,7 @@ package com.firstcode.practicecoding.controllers;
 
 import java.util.List;
 
-import com.firstcode.practicecoding.Repositories.Repository;
+import com.firstcode.practicecoding.repositories.Repository;
 import com.firstcode.practicecoding.entities.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

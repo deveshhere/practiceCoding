@@ -1,4 +1,4 @@
-package com.firstcode.practicecoding.Repositories;
+package com.firstcode.practicecoding.repositories;
 
 import com.firstcode.practicecoding.entities.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;

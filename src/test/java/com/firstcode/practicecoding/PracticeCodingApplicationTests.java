@@ -1,6 +1,6 @@
 package com.firstcode.practicecoding;
 
-import com.firstcode.practicecoding.Repositories.Repository;
+import com.firstcode.practicecoding.repositories.Repository;
 import com.firstcode.practicecoding.controllers.CustomerRestController2;
 import com.firstcode.practicecoding.entities.Customer;
 import org.junit.jupiter.api.Test;
