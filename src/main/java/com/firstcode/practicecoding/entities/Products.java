@@ -13,12 +13,10 @@ public class Products {
     this.name = name;
     this.city = city;
   }
-<<<<<<< HEAD:src/main/java/com/firstcode/practicecoding/entities/Products.java
-  public Products(){
-=======
->>>>>>> 8741040e19688421e8690bc91d482c3336906783:src/main/java/com/firstcode/practicecoding/entities/products.java
 
-  public products() {}
+  public Products() {
+
+  }
 
   public long getId() {
     return id;
@@ -44,7 +42,8 @@ public class Products {
     this.city = city;
   }
 
-  @Id private long id;
+  @Id
+  private long id;
   private String name;
   private String city;
 }

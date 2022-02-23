@@ -12,35 +12,24 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProductController {
 
-  @Autowired private productRepository productRepo;
+  @Autowired
+  productRepository productRepo;
 
   @GetMapping("/Alldata")
   public String productsDetails() {
     return "names";
   }
 
-<<<<<<< HEAD:src/main/java/com/firstcode/practicecoding/controllers/ProductController.java
-    @GetMapping("/addProduct")
-    public List<Products> addproduct(){
-        return productRepo.findAll();
-    }
 
-
-    @PutMapping("/updateProduct")
-    public String Updateproduct(@RequestBody Products product){
-        productRepo.save(product);
-        return "updated";
-    }
-=======
   @GetMapping("/addProduct")
-  public List<products> addproduct() {
+  public List<Products> addproduct() {
     return productRepo.findAll();
   }
 
   @PutMapping("/updateProduct")
-  public String Updateproduct(@RequestBody products product) {
+  public String Updateproduct(@RequestBody Products product) {
     productRepo.save(product);
     return "updated";
   }
->>>>>>> 8741040e19688421e8690bc91d482c3336906783:src/main/java/com/firstcode/practicecoding/controllers/productController.java
+
 }
