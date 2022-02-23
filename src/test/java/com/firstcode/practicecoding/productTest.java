@@ -20,7 +20,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ProductTest {
+public class productTest {
   @Autowired ProductController productcontroller;
 
   @Autowired private MockMvc mockMvc;
