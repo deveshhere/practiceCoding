@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class customerController {
-  //    @Autowired
-  //    Repository repo;
 
   @Autowired CustomerService customerService;
 
@@ -24,7 +22,6 @@ public class customerController {
   @RequestMapping(value = "saveCustomerData")
   public String saveCustomerInfo(@ModelAttribute("Customer") Customer customer, ModelMap modelMap) {
     customerService.saveCustomerInfo(customer);
-    //        repo.save(customer);
     modelMap.addAttribute("msg", "Record is saved successfully!!");
     String showCustomer = "showCustomer";
     return showCustomer;
